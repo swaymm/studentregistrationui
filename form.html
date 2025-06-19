@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+        <small class="error-message" id="nameError"></small>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <small class="error-message" id="emailError"></small>
+      </div>
+      
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Enter your age" min="1" max="120" required>
+        <small class="error-message" id="ageError"></small>
+      </div>
+      
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </div>
+        <small class="error-message" id="genderError"></small>
+      </div>
+      
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+        <small class="error-message" id="mobileError"></small>
+      </div>
+      
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Enter your address" rows="3" required></textarea>
+        <small class="error-message" id="addressError"></small>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" id="submitBtn">Register</button>
+      </div>
+    </form>
+    <div id="successMessage" class="success-message hidden">
+      Registration completed successfully!
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
